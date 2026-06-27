@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Level 18 Unlocked 🎉 | Happy Birthday Anshu!</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Custom Cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-trail" id="cursorTrail"></div>
+
+<!-- Theme Toggle -->
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+  <span class="theme-icon sun">☀️</span>
+  <span class="theme-icon moon">🌙</span>
+</button>
+
+<!-- Navigation Dots -->
+<nav class="nav-dots" id="navDots" aria-label="Section navigation"></nav>
+
+<!-- Sound Toggle -->
+<button class="sound-toggle" id="soundToggle" aria-label="Toggle sound">🔇</button>
+
+<!-- ===== SECTION 1: UNLOCK SCREEN ===== -->
+<section class="section active" id="section-unlock" data-index="0">
+  <canvas id="particleCanvas"></canvas>
+  <div class="unlock-container">
+    <div class="pre-text" id="preText">
+      <div class="pixel-text">22 JUNE</div>
+      <div class="sub-pixel">A legendary day was unlocked</div>
+    </div>
+    <div class="gift-wrapper" id="giftWrapper">
+      <div class="gift-box" id="giftBox">
+        <div class="gift-lid" id="giftLid">
+          <div class="lid-ribbon"></div>
+        </div>
+        <div class="gift-body">
+          <div class="body-ribbon-h"></div>
+          <div class="body-ribbon-v"></div>
+        </div>
+        <div class="gift-glow"></div>
+      </div>
+      <div class="gift-label">Click to open your gift ✨</div>
+    </div>
+    <div class="unlock-reveal" id="unlockReveal">
+      <div class="unlock-badge">
+        <div class="badge-ring"></div>
+        <div class="badge-inner">
+          <div class="badge-level">18</div>
+          <div class="badge-text">UNLOCKED</div>
+        </div>
+      </div>
+      <h1 class="unlock-title">Congratulations!</h1>
+      <p class="unlock-subtitle">Level 18 has been <span class="highlight">officially unlocked</span></p>
+      <p class="unlock-desc">A new chapter begins. The adventure of adulthood awaits — and it's going to be spectacular. ✨</p>
+      <button class="btn-primary" id="startJourney">Begin Your Journey →</button>
+    </div>
+  </div>
+  <div class="confetti-container" id="confettiContainer"></div>
+</section>
+
+<!-- ===== SECTION 2: ACHIEVEMENTS ===== -->
+<section class="section" id="section-achievements" data-index="1">
+  <div class="section-inner">
+    <div class="section-header" data-aos="fade-down">
+      <div class="section-eyebrow">🎮 Achievement System</div>
+      <h2 class="section-title">Your Lifetime Achievements</h2>
+      <p class="section-desc">18 years of being absolutely amazing. Here are just a few of the badges you've earned.</p>
+    </div>
+    <div class="achievements-grid" id="achievementsGrid">
+      <div class="achievement-card" data-achievement="0" data-aos="fade-up" data-aos-delay="0">
+        <div class="achievement-lock">🔒</div>
+        <div class="achievement-content">
+          <div class="achievement-icon">✨</div>
+          <div class="achievement-name">Amazing Friend</div>
+          <div class="achievement-rarity">LEGENDARY</div>
+        </div>
+        <div class="achievement-unlock-fx"></div>
+      </div>
+      <div class="achievement-card" data-achievement="1" data-aos="fade-up" data-aos-delay="100">
+        <div class="achievement-lock">🔒</div>
+        <div class="achievement-content">
+          <div class="achievement-icon">🌈</div>
+          <div class="achievement-name">Dream Chaser</div>
+          <div class="achievement-rarity">EPIC</div>
+        </div>
+        <div class="achievement-unlock-fx"></div>
+      </div>
+      <div class="achievement-card" data-achievement="2" data-aos="fade-up" data-aos-delay="200">
+        <div class="achievement-lock">🔒</div>
+        <div class="achievement-content">
+          <div class="achievement-icon">📚</div>
+          <div class="achievement-name">Future Achiever</div>
+          <div class="achievement-rarity">RARE</div>
+        </div>
+        <div class="achievement-unlock-fx"></div>
+      </div>
+      <div class="achievement-card" data-achievement="3" data-aos="fade-up" data-aos-delay="300">
+        <div class="achievement-lock">🔒</div>
+        <div class="achievement-content">
+          <div class="achievement-icon">🌍</div>
+          <div class="achievement-name">Explorer</div>
+          <div class="achievement-rarity">EPIC</div>
+        </div>
+        <div class="achievement-unlock-fx"></div>
+      </div>
+      <div class="achievement-card" data-achievement="4" data-aos="fade-up" data-aos-delay="400">
+        <div class="achievement-lock">🔒</div>
+        <div class="achievement-content">
+          <div class="achievement-icon">🐦</div>
+          <div class="achievement-name">Angry Bird</div>
+          <div class="achievement-rarity">RARE</div>
+        </div>
+        <div class="achievement-unlock-fx"></div>
+      </div>
+      <div class="achievement-card achievement-special" data-achievement="5" data-aos="fade-up" data-aos-delay="500">
+        <div class="achievement-lock">🔒</div>
+        <div class="achievement-content">
+          <div class="achievement-icon">🎂</div>
+          <div class="achievement-name">Officially 18</div>
+          <div class="achievement-rarity">LEGENDARY+</div>
+        </div>
+        <div class="achievement-unlock-fx"></div>
+      </div>
+    </div>
+    <div class="unlock-all-btn">
+      <button class="btn-secondary" id="unlockAllBtn">Unlock All Achievements ✨</button>
+    </div>
+  </div>
+  <!-- Achievement Modal -->
+  <div class="achievement-modal" id="achievementModal">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose">×</button>
+      <div class="modal-icon" id="modalIcon"></div>
+      <div class="modal-badge" id="modalBadge"></div>
+      <h3 class="modal-title" id="modalTitle"></h3>
+      <p class="modal-msg" id="modalMsg"></p>
+      <div class="modal-stars">⭐⭐⭐⭐⭐</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== SECTION 4: WISH GENERATOR ===== -->
+<section class="section" id="section-wishes" data-index="2">
+  <div class="section-inner">
+    <div class="section-header" data-aos="fade-down">
+      <div class="section-eyebrow">🎯 Wish Generator</div>
+      <h2 class="section-title">The Magic Wish Machine</h2>
+      <p class="section-desc">Spin the magical machine and receive a special wish crafted just for you.</p>
+    </div>
+    <div class="wish-machine" data-aos="zoom-in">
+      <div class="machine-body">
+        <div class="machine-screen">
+          <div class="screen-scanlines"></div>
+          <div class="machine-display" id="machineDisplay">
+            <div class="display-idle">
+              <div class="display-icon">✨</div>
+              <div class="display-text">Press the button to receive your wish</div>
+            </div>
+          </div>
+        </div>
+        <div class="machine-slots">
+          <div class="slot" id="slot1"><span>🌟</span></div>
+          <div class="slot" id="slot2"><span>🎁</span></div>
+          <div class="slot" id="slot3"><span>💫</span></div>
+        </div>
+        <div class="machine-btn-row">
+          <button class="machine-btn" id="generateWish">
+            <span class="btn-text">Generate My Wish!</span>
+            <span class="btn-sparkle">✨</span>
+          </button>
+        </div>
+        <div class="machine-deco">
+          <div class="deco-light" id="decoL1"></div>
+          <div class="deco-light" id="decoL2"></div>
+          <div class="deco-light" id="decoL3"></div>
+          <div class="deco-light" id="decoL4"></div>
+        </div>
+      </div>
+      <div class="wish-history" id="wishHistory">
+        <div class="history-title">Your Collected Wishes</div>
+        <div class="history-items" id="historyItems"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 5: MEMORY VAULT ===== -->
+<section class="section" id="section-memories" data-index="3">
+  <div class="section-inner">
+    <div class="section-header" data-aos="fade-down">
+      <div class="section-eyebrow">🎁 Scratch & Reveal</div>
+      <h2 class="section-title">Birthday Surprise Cards</h2>
+      <p class="section-desc">Scratch each card to uncover hidden wishes, lucky surprises, and special birthday messages made just for you.</p>
+    </div>
+    <div class="polaroid-gallery" id="polaroidGallery">
+      <!-- Polaroids generated by JS -->
+    </div>
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+      <div class="lightbox-content">
+        <button class="lightbox-close" id="lightboxClose">×</button>
+        <button class="lightbox-prev" id="lightboxPrev">‹</button>
+        <div class="lightbox-frame">
+          <div class="lightbox-photo" id="lightboxPhoto"></div>
+          <div class="lightbox-caption" id="lightboxCaption"></div>
+        </div>
+        <button class="lightbox-next" id="lightboxNext">›</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 6: BIRTHDAY GAME ===== -->
+<section class="section" id="section-game" data-index="4">
+  <div class="section-inner game-section-inner">
+    <div class="section-header" data-aos="fade-down">
+      <div class="section-eyebrow">🎂 Birthday Challenge</div>
+      <h2 class="section-title">Catch the Birthday Treats!</h2>
+      <p class="section-desc">Catch the falling cakes 🎂, balloons 🎈, and stars ⭐. Score 50 points to unlock a surprise!</p>
+    </div>
+    <div class="game-wrapper">
+      <div class="game-hud">
+        <div class="hud-item"><span class="hud-label">Score</span><span class="hud-value" id="gameScore">0</span></div>
+        <div class="hud-item"><span class="hud-label">Best</span><span class="hud-value" id="gameBest">0</span></div>
+        <div class="hud-item"><span class="hud-label">Time</span><span class="hud-value" id="gameTimer">30</span></div>
+      </div>
+      <div class="game-arena" id="gameArena">
+        <div class="game-start-overlay" id="gameStartOverlay">
+          <div class="game-start-content">
+            <div class="game-title-big">🎂</div>
+            <h3>Birthday Catcher</h3>
+            <p>Tap the falling treats before they hit the bottom!</p>
+            <button class="btn-primary" id="startGameBtn">Start Game!</button>
+          </div>
+        </div>
+        <div class="game-over-overlay" id="gameOverOverlay" style="display:none;">
+          <div class="game-over-content">
+            <h3 id="gameOverTitle">Time's Up!</h3>
+            <div class="final-score">Final Score: <span id="finalScore">0</span></div>
+            <div class="game-over-msg" id="gameOverMsg"></div>
+            <button class="btn-primary" id="restartGameBtn">Play Again 🎂</button>
+          </div>
+        </div>
+      </div>
+      <!-- Surprise reveal -->
+      <div class="game-surprise" id="gameSurprise" style="display:none;">
+        <div class="surprise-content">
+          <div class="surprise-icon">🎊</div>
+          <h3>Surprise Unlocked!</h3>
+          <p>You're not just talented — you're unstoppable! Here's a special message just for you:</p>
+          <blockquote>"Every champion was once a beginner. Keep playing, keep growing, and keep winning at life! 🏆"</blockquote>
+          <button class="btn-primary" id="closeSurpriseBtn">Continue ✨</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 7: 18 ENVELOPES ===== -->
+<section class="section" id="section-envelopes" data-index="5">
+  <div class="section-inner">
+    <div class="section-header" data-aos="fade-down">
+      <div class="section-eyebrow">💌 Special Wishes</div>
+      <h2 class="section-title">18 Wishes for Your 18th Year</h2>
+      <p class="section-desc">One special wish for each year of your amazing life. Open them all!</p>
+    </div>
+    <div class="envelopes-grid" id="envelopesGrid">
+      <!-- Envelopes generated by JS -->
+    </div>
+    <div class="envelopes-progress">
+      <div class="progress-text"><span id="openedCount">0</span> / 18 opened</div>
+      <div class="progress-bar-wrap"><div class="progress-bar-fill" id="envelopeProgress"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 8: FINAL CELEBRATION ===== -->
+<section class="section" id="section-finale" data-index="6">
+  <canvas id="fireworksCanvas"></canvas>
+  <div class="finale-container">
+    <div class="lanterns-container" id="lanterns"></div>
+    <div class="finale-cake" id="finaleCake">
+      <div class="candles-row">
+        <div class="candle"><div class="flame"></div></div>
+        <div class="candle"><div class="flame"></div></div>
+        <div class="candle"><div class="flame"></div></div>
+        <div class="candle big-candle"><div class="flame big-flame"></div></div>
+        <div class="candle"><div class="flame"></div></div>
+        <div class="candle"><div class="flame"></div></div>
+        <div class="candle"><div class="flame"></div></div>
+      </div>
+      <div class="cake-layer cake-l1"></div>
+      <div class="cake-layer cake-l2"></div>
+      <div class="cake-layer cake-l3"></div>
+      <div class="cake-number">18</div>
+    </div>
+    <div class="finale-message" id="finaleMessage">
+      <div class="finale-badge">🌟 Chapter 18 🌟</div>
+      <h1 class="finale-title">Welcome to Chapter 18</h1>
+      <p class="finale-text">May this year bring <span class="highlight">happiness</span>, <span class="highlight">confidence</span>, <span class="highlight">success</span>, unforgettable <span class="highlight">memories</span>, and exciting <span class="highlight">opportunities</span>.</p>
+      <p class="finale-sub">Keep smiling and enjoy every moment of your journey ahead.</p>
+      <div class="finale-bigwish">🎉 Happy Belated 18th Birthday, Anshu (Hitler)! 🎂✨</div>
+      <div class="finale-signature">With love & all the good wishes 💕</div>
+      <div class="finale-btns">
+        <button class="btn-primary" id="replayBtn">🔄 Replay Experience</button>
+        <button class="btn-ghost" id="shareBtn">💌 Share the Joy</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
